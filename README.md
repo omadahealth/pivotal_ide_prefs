@@ -46,7 +46,7 @@ Then open a terminal and run the following commands:
 
 ```sh
 cd /path/to/your/pivotal_ide_prefs/cli
-bin/ide_prefs --ide=[rubymine,intellij,intellijcommunity,androidstudio] uninstall
+bin/ide_prefs --ide=[rubymine,intellij,intellijcommunity,androidstudio,pycharm] uninstall
 ```
 
 ## Contributing New Preferences
@@ -83,5 +83,5 @@ If your team is already maintaining their rubymine preferences via the now-depre
 * ~~Specify log levels at the command line~~
 * ~~IntelliJ prefs~~
 * Appcode prefs
-* PyCharm prefs
+* ~~PyCharm prefs~~
 * ~~WebStorm prefs~~
