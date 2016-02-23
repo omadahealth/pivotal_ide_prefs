@@ -1,7 +1,5 @@
 # Pivotal IDE Prefs
 
-[![Code Climate](https://codeclimate.com/github/pivotal/pivotal_ide_prefs.png)](https://codeclimate.com/github/pivotal/pivotal_ide_prefs)
-
 This repo provides both a superset of the Mac OS X 10.5+ keybindings for JetBrains IDEs, as well as a team-centric workflow for tracking and syncing IDE customizations over time.
 
 ## Requires
@@ -25,7 +23,7 @@ First, *close your Jetbrains IDE*.
 Then, run the following commands:
 
 ```sh
-git clone https://github.com/pivotal/pivotal_ide_prefs
+git clone https://github.com/omadahealth/pivotal_ide_prefs.git
 cd pivotal_ide_prefs/cli
 bin/ide_prefs --ide=rubymine install
 bin/ide_prefs --ide=webstorm install
