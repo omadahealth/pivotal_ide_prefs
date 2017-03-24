@@ -5,10 +5,13 @@ unless RUBY_VERSION.to_i >= 2
   exit 1
 end
 
-$LOAD_PATH.unshift "../ide_prefs/lib"
-$LOAD_PATH.unshift "../persistence/lib"
-$LOAD_PATH.unshift "../logging/lib"
-$LOAD_PATH.unshift "lib"
+bin_dir = File.dirname(__FILE__)
+root_dir = File.join(bin_dir, '..', '..')
+
+$LOAD_PATH.unshift "#{root_dir}/ide_prefs/lib"
+$LOAD_PATH.unshift "#{root_dir}/persistence/lib"
+$LOAD_PATH.unshift "#{root_dir}/logging/lib"
+$LOAD_PATH.unshift "#{root_dir}/cli/lib"
 
 require "optparse"
 require "ide_prefs"
@@ -23,8 +26,8 @@ OptionParser.new do |opts|
 
   opts.on(
       "--ide=IDE",
-      ["webstorm", "intellij", "intellijcommunity", "rubymine", "appcode", "androidstudio", "pycharm"],
-      "webstorm, intellij, intellijcommunity, rubymine, appcode, androidstudio", "pycharm"
+      ["webstorm", "intellij", "intellijcommunity", "rubymine", "appcode", "androidstudio", "clion", "pycharm"],
+      "webstorm, intellij, intellijcommunity, rubymine, appcode, androidstudio", "clion", "pycharm"
   ) do |ide|
     repo_config_options[:user_prefs_repo_location] = Module.const_get("Cli::Ide::#{ide.capitalize}UserPrefDir").new.path
     repo_config_options[:ide_name] = ide

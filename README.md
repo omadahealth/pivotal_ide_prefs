@@ -23,11 +23,10 @@ First, *close your Jetbrains IDE*.
 Then, run the following commands:
 
 ```sh
-git clone https://github.com/omadahealth/pivotal_ide_prefs.git
-cd pivotal_ide_prefs/cli
-bin/ide_prefs --ide=rubymine install
-bin/ide_prefs --ide=webstorm install
-
+git clone https://github.com/omadahealth/pivotal_ide_prefs
+cd pivotal_ide_prefs
+cli/bin/ide_prefs install --ide=intellij
+# ide flag can be any of [rubymine,intellij,intellijcommunity,webstorm,androidstudio,appcode,clion,pycharm]
 ```
 
 This will install the preferences into your IDE of choice. 
@@ -46,7 +45,7 @@ Then open a terminal and run the following commands:
 
 ```sh
 cd /path/to/your/pivotal_ide_prefs/cli
-bin/ide_prefs --ide=[rubymine,intellij,intellijcommunity,androidstudio,appcode,pycharm] uninstall
+bin/ide_prefs --ide=[rubymine,intellij,intellijcommunity,androidstudio,appcode,clion,pycharm] uninstall
 ```
 
 ## Contributing New Preferences
@@ -75,14 +74,3 @@ If your team is already maintaining their rubymine preferences via the now-depre
 
 4. Re-install your preferences using `pivotal_ide_prefs` (see the Installation section above).
 
-## TODO
-
-* ~~Install command~~
-* ~~Uninstall command~~
-* ~~Make commands Idempodent~~
-* ~~Basic Logging~~
-* ~~Specify log levels at the command line~~
-* ~~IntelliJ prefs~~
-* Appcode prefs
-* ~~PyCharm prefs~~
-* ~~WebStorm prefs~~
